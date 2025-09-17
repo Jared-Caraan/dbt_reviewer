@@ -1,4 +1,4 @@
-# Analytics Development Cycle
+# Analytics Development LifeCycle
 ## How DBT fits into the pipeline
 <img width="1307" height="979" alt="image" src="https://github.com/user-attachments/assets/bd3558d3-8318-408b-bfe7-ac9d0b4a5562" />
 
