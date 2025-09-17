@@ -1,4 +1,4 @@
-# Analytics Development Cycle
+# Analytics Development LifeCycle
 ## ELT vs ETL
 When comparing ETL vs ELT, the key difference lies in when and where the data transformation occurs. With ETL, data is transformed before loading, while in ELT, data is transformed after loading into the data warehouse.
 #### What is ETL?
