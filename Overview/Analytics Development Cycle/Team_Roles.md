@@ -1,4 +1,4 @@
-# Analytics Development Cycle
+# Analytics Development LifeCycle
 ## Data Team Roles
 ### Data Engineer
 Data engineers build systems to collect and process data. They create the foundation for all data work. Their expertise centers on building reliable pipelines.
