@@ -30,5 +30,6 @@ To be able to materialize dbt models in Snowflake, we need to ensure that our ro
 <img width="1431" height="288" alt="image" src="https://github.com/user-attachments/assets/21e0e337-4b05-4872-b2b4-a885ce6dff7c" />
 
 Once you're on the studio, execute the comamnd ``dbt run``
+
 <img width="555" height="598" alt="image" src="https://github.com/user-attachments/assets/b63f4832-cd47-4841-aa1d-1d52f2ce4285" />
 
