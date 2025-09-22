@@ -101,10 +101,5 @@ SELECT * FROM RAW.STRIPE.PAYMENT;
 ```
 <img width="1417" height="509" alt="image" src="https://github.com/user-attachments/assets/62c77470-744f-427a-a1e0-7b6b7b9d18c4" />
 
-To find your account number, there are two ways:
-1. URL (highlighted)
-<img width="890" height="57" alt="image" src="https://github.com/user-attachments/assets/784104bb-9e59-49f0-82bc-a50aee6221f8" />
-
-2. Profile on the left-side tab
-<img width="752" height="701" alt="image" src="https://github.com/user-attachments/assets/26ef2682-94f0-445c-8bb8-e8521fb42801" />
-
+To find your account number, click on your name on the lower-left corner. Then on **ACCOUNT**, click on **View account details**. Your account number is the value on the **Account identifier**
+<img width="1101" height="704" alt="image" src="https://github.com/user-attachments/assets/8344d5d8-eee2-448f-a97d-a5d09a9318b0" />
