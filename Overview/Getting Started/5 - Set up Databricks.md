@@ -14,3 +14,15 @@ Notes:
 - Option should be **Create new table**.
 - Change the schema to **jaffle_shop** for customers and orders; **stripes** for payment. If already existing, opt for another name, then just rename later.
 - Upload one at a time.
+
+4. Rename your workspace catalog to **raw**
+<img width="1676" height="857" alt="image" src="https://github.com/user-attachments/assets/be6ccc5b-e3f6-4fdd-a3f5-d200f14bcc6f" />
+
+5. Create a new catalog by clicking on the plus sign on top of the catalog menu. Name it **analytics**. This is where dbt transformed models will live or considered as the target database.
+<img width="1673" height="817" alt="image" src="https://github.com/user-attachments/assets/df81d866-5b13-4069-bbf5-87e69f98e030" />
+
+6. Next is to set up a user token. Click on your profile at top-right corner -> **Settings** -> **Developer** -> **Manage** -> **Generate new token** -> Name the token **dbt** -> **Generate** -> Copy your token somewhere.
+<img width="1670" height="864" alt="image" src="https://github.com/user-attachments/assets/291484c2-6af2-4dc4-a575-188fc70ac5da" />
+
+7. Next thing we need is the server host name. This can be seen on the URL.
+<img width="936" height="61" alt="image" src="https://github.com/user-attachments/assets/b749325e-4539-4200-b779-45f7166a4efe" />
