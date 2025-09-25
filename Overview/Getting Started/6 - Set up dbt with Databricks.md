@@ -20,7 +20,7 @@ https://www.getdbt.com/signup
 <hr>
 
 4. Next is to choose your repository
-- For this tutorial, we use Managed. This is a repository that dbt Labs manages. It will store your code but won't have any access to this repository.
+- For this tutorial, we use *Managed*. This is a repository that dbt Labs manages. It will store your code but won't have any access to this repository.
 <img width="989" height="518" alt="image" src="https://github.com/user-attachments/assets/36a7b26d-64bd-4a3d-bfb7-993085953375" />
 <hr>
 
