@@ -27,5 +27,5 @@ Notes:
 7. Next thing we need is the server host name. This can be seen on the URL.
 <img width="936" height="61" alt="image" src="https://github.com/user-attachments/assets/b749325e-4539-4200-b779-45f7166a4efe" />
 
-8. Finally, we need to retrieve our HTTP path. Click on **SQL Warehouses** -> Click on your warehouse -> Get the last portion of your URL starting with **sql**
+8. Finally, we need to retrieve our HTTP path. Click on **SQL Warehouses** -> Click on your warehouse -> Get the last portion of your URL starting with **\sql**
  <img width="1919" height="945" alt="image" src="https://github.com/user-attachments/assets/5a77367c-060c-4aa2-a10f-f6d987156f53" />
