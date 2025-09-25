@@ -12,5 +12,5 @@
 
 Notes:
 - Option should be **Create new table**.
-- Change the schema to **jaffle_shop**. If already existing, opt for another name, then just rename later.
+- Change the schema to **jaffle_shop** for customers and orders; **stripes** for payment. If already existing, opt for another name, then just rename later.
 - Upload one at a time.
