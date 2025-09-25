@@ -1,11 +1,14 @@
 ## Snowflake Free Trial
 https://signup.snowflake.com/?utm_cta=trial-en-www-homepage-top-right-nav-ss-evg&_ga=2.74406678.547897382.1657561304-1006975775.1656432605&_gac=1.254279162.1656541671.Cj0KCQjw8O-VBhCpARIsACMvVLPE7vSFoPt6gqlowxPDlHT6waZ2_Kd3-4926XLVs0QvlzvTvIKg7pgaAqd2EALw_wcB
 
-Once you finish signing up and activating your account, you will be redirected to the homepage.
+1. Once you finish signing up and activating your account, you will be redirected to the homepage.
 <img width="1919" height="835" alt="image" src="https://github.com/user-attachments/assets/53ba3414-c5be-4787-b74a-6e377508116d" />
+<hr>
 
-On the left-side panel, click on **+** which is the Create button, then click **SQL File**.
-Create the following database objects
+2. On the left-side panel, click on **+** which is the Create button, then click **SQL File**.
+<hr>
+
+3. Create the following database objects
 ```sql
 CREATE WAREHOUSE transforming;
 CREATE DATABASE raw;
@@ -14,7 +17,7 @@ CREATE SCHEMA raw.jaffle_shop;
 CREATE SCHEMA raw.stripe;
 ```
 
-Then, followed by the *customers* table
+Then, followed by the `customers` table
 ```sql
 CREATE TABLE raw.jaffle_shop.customers 
 ( 
@@ -24,7 +27,7 @@ CREATE TABLE raw.jaffle_shop.customers
 );
 ```
 
-Load some data into the *customers* table
+Load some data into the `customers` table
 ```sql
 COPY INTO raw.jaffle_shop.customers (id, first_name, last_name)
 FROM 's3://dbt-tutorial-public/jaffle_shop_customers.csv'
@@ -41,7 +44,7 @@ SELECT * FROM RAW.JAFFLE_SHOP.CUSTOMERS;
 ```
 <img width="1431" height="504" alt="image" src="https://github.com/user-attachments/assets/c86d4ea3-01fd-494e-9707-120b0cc71ec4" />
 
-Create the *orders* table
+Create the `orders` table
 ```sql
 CREATE TABLE raw.jaffle_shop.orders
 ( 
@@ -53,7 +56,7 @@ CREATE TABLE raw.jaffle_shop.orders
 );
 ```
 
-Then load some data into the *orders* table
+Then load some data into the `orders` table
 ```sql
 COPY INTO raw.jaffle_shop.orders (id, user_id, order_date, status)
 FROM 's3://dbt-tutorial-public/jaffle_shop_orders.csv'
@@ -70,7 +73,7 @@ SELECT * FROM RAW.JAFFLE_SHOP.ORDERS;
 ```
 <img width="1430" height="541" alt="image" src="https://github.com/user-attachments/assets/8c989fa0-02a5-4d7c-b31b-29bdcb9e6274" />
 
-Then, create the *payment* table
+Then, create the `payment` table
 ```sql
 CREATE TABLE raw.stripe.payment 
 ( 
@@ -84,7 +87,7 @@ CREATE TABLE raw.stripe.payment
 );
 ```
 
-Then load some data into the *payment* table
+Then load some data into the `payment` table
 ```sql
 COPY INTO raw.stripe.payment (id, orderid, paymentmethod, status, amount, created)
 FROM 's3://dbt-tutorial-public/stripe_payments.csv'
@@ -100,6 +103,7 @@ Check if your data has been loaded by selecting from the table
 SELECT * FROM RAW.STRIPE.PAYMENT;
 ```
 <img width="1417" height="509" alt="image" src="https://github.com/user-attachments/assets/62c77470-744f-427a-a1e0-7b6b7b9d18c4" />
+<hr>
 
-To find your account number, click on your name on the lower-left corner. Then on **ACCOUNT**, click on **View account details**. Your account number is the value on the **Account identifier**
+4. To find your account number, click on your name on the lower-left corner. Then on **ACCOUNT**, click on **View account details**. Your account number is the value on the **Account identifier**
 <img width="1101" height="704" alt="image" src="https://github.com/user-attachments/assets/8344d5d8-eee2-448f-a97d-a5d09a9318b0" />
