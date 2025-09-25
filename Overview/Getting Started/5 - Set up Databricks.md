@@ -10,3 +10,7 @@
 - [jaffle_shop_customers.csv](https://github.com/user-attachments/files/22522313/jaffle_shop_customers.csv)
 <img width="1919" height="853" alt="image" src="https://github.com/user-attachments/assets/a5edf744-2007-4820-bc1f-dc7c55135da6" />
 
+Notes:
+- Option should be **Create new table**.
+- Change the schema to **jaffle_shop**. If already existing, opt for another name, then just rename later.
+- Upload one at a time.
