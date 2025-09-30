@@ -1,1 +1,1 @@
-
+## Configure Snowflake for dbt
