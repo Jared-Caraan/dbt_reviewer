@@ -30,3 +30,8 @@ GRANT ROLE transfomer_prod TO USER PROD_SERVICE_ACCOUNT_USER;
 5. Overwrite the values in your **Role**, **Database**, and **Warehouse**. They should not be the same as the development environment.
 6. In the **Deployment credentials**, use *Username and password* for the **Auth method**. Your username is your service account name, in this example, it's *PROD_SERVICE_ACCOUNT_USER* from the query above. Then the password would be the *YhcLoFPt7mi!thtD*. Just put an arbitrary name for the schema, because it will be overriden by the models eventually.
 7. Test your connection. Then click **Save**
+
+## Create a job
+1. On dbt Cloud homepage, navigate to the side menu -> **Orchestration** -> **Jobs**
+2. Click on **Create job** -> **Deploy job**
+3. Concisely name your job, accept the defaults on the **Execution settings** section. Modify some triggers according to your desired schedule. CRONs are accepted as well. Then click **Save**.
