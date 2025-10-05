@@ -11,3 +11,10 @@ The staging folder will organize all the source-conformed logic. This is where y
 5. Then, under the **models** directory, create a **sales** folder.
 6. Create an empty file (e.g. *.gitkeep* file) under the **sales** folder.
 7. Commit your changes
+
+#### Configure dbt_project.yml and README.md
+1. Change the value of ``name:`` key
+2. Change ``my_new_project:`` to the given value in the previous step.
+3. Delete unused model configurations.
+4. Update the **README.md file**. This will help other developers get started on the project.
+5. Commit your changes.
