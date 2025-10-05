@@ -6,7 +6,9 @@ c. Deployment and development environments must use the same version of dbt.\
 d. Deployment and development environments can both be used for editing code and running code on a schedule.
 
 Answer: b
-##
+## 
+Which one of the following is a true statement about setting up folders in dbt Cloud?
+
 a. In the data maturity model, staging folders are used to store transformed data\
 b. .gitkeep line in the dbt_project.yml file will help Git recognize an empty directory\
 c. Merging changes to the default branch will update the code and the IDE\
