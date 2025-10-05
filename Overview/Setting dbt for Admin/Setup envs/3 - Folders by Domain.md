@@ -2,3 +2,12 @@
 
 In this example, let's set up the folder structure for three teams or domains - Finance, Sales, and Marketing.
 
+#### Creating folders per team
+The staging folder will organize all the source-conformed logic. This is where you'll do some simple cleaning on raw data that has been imported into Snowflake. Usually, teams will prefix these models with ``stg_``.
+1. Under the **models** directory, create a **finance** folder.
+2. Create an empty file (e.g. *.gitkeep* file) under the **finance** folder.
+3. Then, under the **models** directory, create a **marketing** folder.
+4. Create an empty file (e.g. *.gitkeep* file) under the **marketing** folder.
+5. Then, under the **models** directory, create a **sales** folder.
+6. Create an empty file (e.g. *.gitkeep* file) under the **sales** folder.
+7. Commit your changes
