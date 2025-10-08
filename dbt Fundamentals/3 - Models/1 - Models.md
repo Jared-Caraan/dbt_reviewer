@@ -43,3 +43,5 @@ final as (
 )
 select * from final
 ```
+4. Run the command `dbt run` or just click *Build*.
+5. Commit your new sql file.
