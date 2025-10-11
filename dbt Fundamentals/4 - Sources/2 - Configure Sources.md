@@ -26,6 +26,8 @@ sources:
     tables:
       - name: payment
 ```
+``name:`` - This is the name you'll use in the source function. It identifies the database and the schema.
+
 > [!TIP]
 > To avoid typing everything on source configuration, you can type `__source`.
 > 
