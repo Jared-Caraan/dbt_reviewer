@@ -26,6 +26,9 @@ sources:
     tables:
       - name: payment
 ```
+> [!TIP]
+> To avoid typing everything on source configuration, you can type `__source`.
+> 
 3. Replace the hardcoded source in `stg_jaffle_shop__orders.sql`. The code should now be similar to this:
 ```sql
 select
