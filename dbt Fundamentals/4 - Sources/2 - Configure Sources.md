@@ -26,8 +26,6 @@ sources:
     tables:
       - name: payment
 ```
-``name:`` - This is the name you'll use in the source function. It identifies the database and the schema.
-
 > [!TIP]
 > To avoid typing everything on source configuration, you can type `__source`.
 > 
@@ -66,3 +64,20 @@ from {{ source('stripe', 'payment') }}
 7. Commit and merge once done.
 
 You can also write source configurations using **codegen** package from [hub.getdbt.com](http://hub.getdbt.com/)
+
+```yaml
+sources:
+  - name: jaffle_shop
+    database: raw  
+    schema: jaffle_shop_dataset 
+    tables:
+      - name: orders
+        identifier: jaffle_orders_information_table
+      - name: customers
+        identifier: jaffle_customers_information_table
+```
+``name: jaffle_shop`` - This is the name you'll use in the source function. It identifies the database and the schema. This means that `jaffle_shop` refers to `raw.jaffle_shop_dataset`.
+
+``name: orders`` - This is the name you'll use in the source function. It identifies the table name. The hardcoded value would be `raw.jaffle_shop_dataset.jaffle_orders_information_table`
+
+If there are no `identifier:`, then ``name: orders`` points to its literal table name. The hardcoded value would be `raw.jaffle_shop_dataset.orders`.
