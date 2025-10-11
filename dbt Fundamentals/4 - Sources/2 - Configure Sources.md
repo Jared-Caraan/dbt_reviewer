@@ -16,6 +16,11 @@ sources:
     tables:
       - name: customers
       - name: orders
+  - name: stripe
+    database: raw
+    schema: stripe
+    tables:
+      - name: payment
 ```
 3. Replace the hardcoded source in `stg_jaffle_shop__orders.sql`. The code should now be similar to this:
 ```sql
