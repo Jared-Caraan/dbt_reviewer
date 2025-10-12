@@ -40,5 +40,27 @@ For the column `order_status`, dbt will test if the columns only contain the val
 For the column `customer_id` in the table `orders`, we are testing if the `customer_id` does exist on the `customers` table since it is its primary key.
 
 3. To execute your data tests, run the command `dbt test`. To specifically execute a test, run the command `dbt test --select stg_jaffle_shop__orders`.
+4. Commit and sync your changes.
 
 ## Singular Test
+
+To write a singular test, your goal is to write a checking query that asserts that no row should be returned.
+
+We want to create a custom test for `stg_stripe__payment` which is - the sum of the amounts should never be negative.
+
+1. Under the `tests` folder, create an sql file named `assert_stg_stripe__payment_total_positive.sql`.
+2. In `assert_stg_stripe__payment_total_positive.sql`, write the ff. lines:
+```sql
+-- Refunds have a negative amount, so the total amount should always be >= 0.
+-- Therefore return records where this isn't true to make the test fail.
+select
+    order_id,
+    sum(amount) as total_amount
+from {{ ref('stg_stripe__payments') }}
+group by 1
+having total_amount < 0
+```
+3. Run `dbt test --select stg_stripe__payments`
+4. Commit and sync your changes.
+
+Executing the command `dbt test --select test_type:generic` will only run generic tests. On the other hand, `dbt test --select test_type:singular` will only run singular tests.
