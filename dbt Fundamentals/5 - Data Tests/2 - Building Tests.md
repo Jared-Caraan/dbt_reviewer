@@ -64,3 +64,34 @@ having total_amount < 0
 4. Commit and sync your changes.
 
 Executing the command `dbt test --select test_type:generic` will only run generic tests. On the other hand, `dbt test --select test_type:singular` will only run singular tests.
+
+## Testing Sources
+Putting assertions in sources is just the same as testing the models. You will put your data tests on your sources' yaml file.
+
+The code looks like this:
+```yaml
+sources:
+  - name: jaffle_shop
+    database: raw
+    schema: jaffle_shop
+    tables:
+      - name: customers
+        columns:
+          - name: id
+            description: primary key
+            data_tests:
+              - unique
+              - not_null        
+      - name: orders
+        config:
+          freshness:
+            warn_after:
+              count: 12
+              period: hour
+            error_after:
+              count: 1
+              period: day
+          loaded_at_field: _etl_loaded_at
+```
+
+To execute data tests on your source, run the command `dbt test --select source:<source name>` or `dbt test --select source:*` if you want all your sources to be trusted.
