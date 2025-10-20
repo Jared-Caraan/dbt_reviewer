@@ -16,6 +16,9 @@
   - Metrics (MET)
   - Project (PRJ)
   - Semantics (SEM)
+  - Snapshot
+  - Seed
+  - Saved Query
 
 #### Model Overview
 - Description of the model
