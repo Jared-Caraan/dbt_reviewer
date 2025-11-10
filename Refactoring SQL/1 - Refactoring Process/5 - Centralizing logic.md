@@ -34,7 +34,7 @@
    ```
    </details>
 
-3. Identify where the marts CTEs are. Whenever we're talking about marts models that is typically indicated by joins and that's because whenever we're joining, what we're typically trying to achieve is we're trying to achieve a different concept that's going to help in our analyses. These CTEs conduct joins - notate above this section of CTEs with a comment that says `-- marts`.
+2. Identify where the marts CTEs are. Whenever we're talking about marts models that is typically indicated by joins and that's because whenever we're joining, what we're typically trying to achieve is we're trying to achieve a different concept that's going to help in our analyses. These CTEs conduct joins - notate above this section of CTEs with a comment that says `-- marts`.
 
    <details>
    <summary>Marts CTEs</summary>
@@ -135,11 +135,35 @@
    
    -- Simple Select Statement
    select * from final
+   ```
+   
    </details>
 
-4. Remove any redundant CTEs that conduct the same transformations on the same data sets. Replace all references to any removed CTEs with the proper references.
+3. Remove any redundant CTEs that conduct the same transformations on the same data sets. Replace all references to any removed CTEs with the proper references.
 
-5. In the marts area, look at each field and identify the transformations that answer Yes to both of these questions:
+   <details>
+   <summary>Redundant CTEs</summary>
+
+   <br>Remove this block of code because it is similar to the `customers` CTE making it redundant. We can just reference the `customers` table.
+      
+   ```sql
+   b as ( 
+
+    select 
+
+        first_name || ' ' || last_name as name, 
+        * 
+
+    from customers
+
+   )
+   ```
+
+   - Replace all references of `b` with `customers` on the `marts` queries.
+   - Pay attention to the aliases
+   
+   </details>
+4. In the marts area, look at each field and identify the transformations that answer Yes to both of these questions:
 
    - Can this transformation be done using one data set?
    - Is this transformation done on a field whose value is not due to a join?
@@ -151,6 +175,29 @@ Move these transformations to the appropriate CTE under the -- staging section o
    - Re-referencing the CTE and field names correctly
    - Giving good names to fields that don't have a good name established
 
+   <details>
+   <summary>Changed CTEs</summary>
+
+   <br>Remove this block of code because it is similar to the `customers` CTE making it redundant. We can just reference the `customers` table.
+      
+   ```sql
+   b as ( 
+
+    select 
+
+        first_name || ' ' || last_name as name, 
+        * 
+
+    from customers
+
+   )
+   ```
+
+   - Replace all references of `b` with `customers` on the `marts` queries.
+   - Pay attention to the aliases
+   
+   </details>
+   
 5. There was not a subquery that operated only on the `payments` table. Create a new CTE under the -- staging area that selects from the payments CTE, and continue moving transformations that belong to payment data following the rules in step 4.
 
 **Move transformations to staging models**
