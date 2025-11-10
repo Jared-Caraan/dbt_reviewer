@@ -169,36 +169,85 @@
    - Is this transformation done on a field whose value is not due to a join?
    - For example: `case when data_set.status is null` looks like it can be done using one data set, but if the status is null because the row wasn't joined with other data, then doing this earlier than where the join occurs will result in incorrect calculations.
 
-Move these transformations to the appropriate CTE under the -- staging section of code. Ensure that when you move these, you are:
+   Move these transformations to the appropriate CTE under the -- staging section of code. Ensure that when you move these, you are:
 
    - Removing redundant transformations
    - Re-referencing the CTE and field names correctly
    - Giving good names to fields that don't have a good name established
-
+   <br>
    <details>
    <summary>Changed CTEs</summary>
 
-   <br>Remove this block of code because it is similar to the `customers` CTE making it redundant. We can just reference the `customers` table.
+   <br>Move these columns from `customer_order_history` to `customers` CTE so that we wouldn't need to rename the column twice.
       
    ```sql
-   b as ( 
+   customers.id as customer_id,
+   customers.name as full_name,
+   customers.last_name as surname,
+   customers.first_name as givenname,
+   ```
+
+   - Remove all the `customers` aliases because it's now inside the `customers` CTE.
+   - Remove the line `customers.name as full_name` completely because it can be addressed by the `first_name || ' ' || last_name as name` line.
+   - Remove the asterisk
+   - Fix the `customers` references and aliases on the `marts` query.
+   - Fix the `customers` references and aliases on the `final` query.
+   
+   <br>Now, the `customers` CTE now looks like this.
+
+   ```sql
+   -- staging
+   customers as (
 
     select 
+        id as customer_id,
+        last_name as surname,
+        first_name as givenname,
+        first_name || ' ' || last_name as full_name
 
-        first_name || ' ' || last_name as name, 
-        * 
-
-    from customers
+    from base_customers
 
    )
    ```
 
-   - Replace all references of `b` with `customers` on the `marts` queries.
-   - Pay attention to the aliases
+   <br>Then, the `customer_order_history` CTE now looks like this.
+
+   ```sql
+   -- marts
+   customer_order_history as (
+
+    select
+        customers.customer_id,
+        customers.full_name,
+        customers.surname,
+        customers.givenname,
+        min(order_date) as first_order_date,
+        ...
+    join customers
+    on a.user_id = customers.customer_id
+        ...
+    group by customers.customer_id, customers.full_name, customers.surname, customers.givenname
+   ```
+
+   <br>And the `final` CTE now looks like this.
+
+   ```sql
+   -- Final CTEs 
+   final as (
+
+    select 
+
+        orders.id as order_id,
+        orders.user_id as customer_id,
+        customers.surname,
+        customers.givenname,
+        ...
+   ```
+
+   <br>Rename `a` CTE to `orders` and `orders` to `base_orders`.
+   </details>   
    
-   </details>
-   
-5. There was not a subquery that operated only on the `payments` table. Create a new CTE under the -- staging area that selects from the payments CTE, and continue moving transformations that belong to payment data following the rules in step 4.
+6. There was not a subquery that operated only on the `payments` table. Create a new CTE under the -- staging area that selects from the payments CTE, and continue moving transformations that belong to payment data following the rules in step 4.
 
 **Move transformations to staging models**
 Once you're done with the above, It's time to split out the code under `-- staging` and create models!
