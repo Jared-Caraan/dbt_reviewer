@@ -244,8 +244,30 @@
         ...
    ```
 
-   <br>Rename `a` CTE to `orders` and `orders` to `base_orders`.
-   </details>   
+   <br>Next is to fix up and transform the `orders` CTE.
+
+   ```sql
+   orders as (
+
+      select
+
+        id as order_id,
+        user_id as customer_id,
+        order_date,
+        status as order_status
+        row_number() over (
+            partition by user_id 
+            order by order_date, id
+        ) as user_order_seq,
+
+      from base_orders
+
+   ),
+   ```
+
+   - Add redundant columns into the staging `orders` CTE
+   - Rename columns appropriately as well as other CTEs
+   </details>
    
 6. There was not a subquery that operated only on the `payments` table. Create a new CTE under the -- staging area that selects from the payments CTE, and continue moving transformations that belong to payment data following the rules in step 4.
 
