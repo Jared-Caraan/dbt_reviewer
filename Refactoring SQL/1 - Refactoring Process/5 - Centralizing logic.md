@@ -267,46 +267,248 @@
 
    - Add redundant columns into the staging `orders` CTE
    - Rename columns appropriately as well as other CTEs
+   - Fix references of `orders` CTE on the marts CTE.
    </details>
    
-6. There was not a subquery that operated only on the `payments` table. Create a new CTE under the -- staging area that selects from the payments CTE, and continue moving transformations that belong to payment data following the rules in step 4.
+5. There was not a subquery that operated only on the `payments` table. Create a new CTE under the -- staging area that selects from the payments CTE, and continue moving transformations that belong to payment data following the rules in step 4.
 
+    <details>
+    <summary>Payment CTE</summary>
+    
+    <br>Create a `payments` CTE and change the import `payments` CTE to `base_payments`.
+
+    ```sql
+    payments as (
+
+    select
+        id as payment_id,
+        orderid as order_id,
+        status as payment_status,
+        round(amount/100.0, 2) as payment_amount
+    from base_payments
+    ),
+    ```
+
+    - Fix the `payments` references and aliases on the marts CTE.
+    
+    </details>
 **Move transformations to staging models**
 Once you're done with the above, It's time to split out the code under `-- staging` and create models!
 
 1. Under `staging > jaffle_shop` create files called `stg_jaffle_shop__customers.sql` and `stg_jaffle_shop__orders.sql`.
 
-2. Under `staging > stripe` create a file called stg_stripe__payments.sql.
+2. Under `staging > stripe` create a file called `stg_stripe__payments.sql`.
 
 3. Starting with stg_jaffle_shop__customers.sql, cut from the fct_customer_orders.sql and paste the CTE that operates only on the customers data.
 
-You then need to structure your code as we did in fct_customer_orders.sql:
-```sql
-with
+   <details>
+   <summary>Staging Payments</summary>
 
-source as (
+   ```sql
+   with
 
-    select * from {{ source('jaffle_shop', 'customers') }}
+   source as (
+   
+       select * from {{ source('jaffle_shop', 'payment') }}
+   
+   ),
+   
+   transformed as (
+   
+       select
+           id as payment_id,
+           orderid as order_id,
+           status as payment_status,
+           round(amount/100.0, 2) as payment_amount
+       from source
+   )
+   
+   select * from transformed
+   ```
+   </details>
 
-),
+   <details>
+   <summary>Staging Orders</summary>
 
-transformed as (
+   ```sql
+   with
 
-    select 
+   source as (
+   
+       select * from {{ source('jaffle_shop', 'orders') }}
+   
+   ),
+   
+   transformed as (
+   
+         select
+   
+           id as order_id,
+           user_id as customer_id,
+           order_date,
+           status as order_status
+           row_number() over (
+               partition by user_id 
+               order by order_date, id
+           ) as user_order_seq,
+   
+         from source
+   
+   )
+   
+   select * from transformed
+   ```
+   </details>
 
-        id as customer_id,
-        last_name as surname,
-        first_name as givenname,
-        first_name || ' ' || last_name as full_name
+   <details>
+   <summary>Staging Customers</summary>
 
-    from source
-
-)
-
-select * from transformed
-```
-Do the same with `stg_jaffle_shop__orders.sql` and `stg_stripe__payments.sql`.
+   ```sql
+   with
+   
+   source as (
+   
+       select * from {{ source('jaffle_shop', 'customers') }}
+   
+   ),
+   
+   transformed as (
+   
+       select 
+   
+           id as customer_id,
+           last_name as surname,
+           first_name as givenname,
+           first_name || ' ' || last_name as full_name
+   
+       from source
+   
+   )
+   
+   select * from transformed
+   ```
+   </details>
 
 4. Back in `fct_customer_orders.sql`, ensure you've moved all of your `-- staging` CTEs into staging models and remove the code, if you haven't already. Change your **import CTEs** to use the `{{ ref() }}` function to refer to your new staging models instead of the source. Ensure everything is referenced correctly in subsequent CTEs.
 
+   <details>
+   <summary>Revised fact table</summary>
+
+   ```sql
+   with
+   
+   -- Import CTEs
+   customers as (
+   
+       select * from {{ ref('stg_jaffle_shop__customers') }}
+   
+   ),
+   
+   orders as (
+   
+       select * from {{ ref('stg_jaffle_shop__orders') }}
+   
+   ),
+   
+   payments as (
+   
+       select * from {{ ref('stg_stripe__payments') }}
+   
+   ),
+   
+   customer_order_history as (
+   
+       select
+           customers.customer_id,
+           customers.full_name,
+           customers.surname,
+           customers.givenname,
+           min(order_date) as first_order_date,
+   
+           min(case 
+               when orders.order_status not in ('returned','return_pending') 
+               then order_date 
+           end) as first_non_returned_order_date,
+   
+           max(case 
+               when orders.order_status not in ('returned','return_pending') 
+               then order_date 
+           end) as most_recent_non_returned_order_date,
+   
+           coalesce(max(user_order_seq),0) as order_count,
+   
+           coalesce(count(case 
+               when orders.order_status != 'returned' 
+               then 1 end),
+               0
+           ) as non_returned_order_count,
+   
+           sum(case 
+               when orders.order_status not in ('returned','return_pending') 
+               then payments.payment_amount 
+               else 0 
+           end) as total_lifetime_value,
+   
+           sum(case 
+               when orders.order_status not in ('returned','return_pending') 
+               then payments.payment_amount 
+               else 0 
+           end)
+           / nullif(count(case 
+               when orders.order_status not in ('returned','return_pending') 
+               then 1 end),
+               0
+           ) as avg_non_returned_order_value,
+   
+           array_agg(distinct orders.order_id) as order_ids
+   
+       from orders
+   
+       join customers
+       on orders.customer_id = customers.customer_id
+   
+       left outer join payments
+       on orders.order_id = payments.order_id
+   
+       where orders.order_status not in ('pending') and payments.payment_status != 'fail'
+   
+       group by customers.customer_id, customers.full_name, customers.surname, customers.givenname
+   
+   ),
+   
+   -- Final CTEs 
+   final as (
+   
+       select 
+   
+           orders.order_id,
+           orders.customer_id,
+           customers.surname,
+           customers.givenname,
+           first_order_date,
+           order_count,
+           total_lifetime_value,
+           payment_amount as order_value_dollars,
+           orders.order_status,
+           payments.payment_status
+   
+       from orders
+   
+       join customers
+       on orders.customer_id = customers.id
+   
+       join customer_order_history
+       on orders.customer_id = customer_order_history.customer_id
+   
+       left outer join payments
+       on orders.order_id = payments.order_id
+   
+       where payments.payment_status != 'fail'
+   
+   )
+   
+   -- Simple Select Statement
+   select * from final
+   ```
+   </details>
 5. Finally, run `dbt run -m +fct_customer_orders` to ensure your models build successfully.
