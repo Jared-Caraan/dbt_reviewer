@@ -13,6 +13,9 @@ A few helpful features of Jinja include dictionaries, lists, if/else statements,
 
 **Dictionaries** are data structures composed of key-value pairs.
 
+<details>
+<summary>Dictionaries</summary>
+
 ```jinja
 {% set person = {
     ‘name’: ‘me’,
@@ -27,8 +30,13 @@ me
 
 3
 ```
+</details>
+
 
 **Lists** are data structures that are ordered and indexed by integers.
+
+<details>
+<summary>Lists</summary>
 
 ```jinja
 {% set self = [‘me’, ‘myself’] %}
@@ -37,8 +45,12 @@ me
 
 me
 ```
+</details>
 
-**If/else statements** are control statements that make it possible to provide instructions for a computer to make decisions based on clear criteria.
+**If/Else statements** are control statements that make it possible to provide instructions for a computer to make decisions based on clear criteria.
+
+<details>
+<summary>If/Else</summary>
 
 ```jinja
 {% set temperature = 80.0 %}
@@ -59,8 +71,12 @@ On a day like this, I especially like
 
 a refreshing mango sorbet
 ```
+</details>
 
 **For loops** make it possible to repeat a code block while passing different values for each iteration through the loop.
+
+<details>
+<summary>For-Loops</summary>
 
 ```jinja
 {% set flavors = [‘chocolate’, ‘vanilla’, ‘strawberry’] %}
@@ -77,8 +93,12 @@ Today I want vanilla ice cream!
 
 Today I want strawberry ice cream!
 ```
+</details>
 
 **Macros** are a way of writing functions in Jinja. This allows us to write a set of statements once and then reference those statements throughout your code base.
+
+<details>
+<summary>Macros</summary>
 
 ```jinja
 {% macro hoyquiero(flavor, dessert = ‘ice cream’) %}
@@ -95,6 +115,8 @@ Today I want chocolate ice cream!
 
 Today I want mango sorbet!
 ```
+</details>
+
 
 ## Whitespace Control
 We can control for whitespace by adding a single dash on either side of the Jinja delimiter. This will trim the whitespace between the Jinja delimiter on that side of the expression.
