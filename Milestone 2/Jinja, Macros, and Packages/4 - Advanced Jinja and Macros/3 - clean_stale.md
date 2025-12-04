@@ -21,7 +21,7 @@ Create a new macro under the `macros` folder and name it clean_stale.sql.
                 else 
                     'TABLE'
             end as drop_type, 
-            'DROP ' || drop_type || ' {{ database | upper }}.' || table_schema || '.' || table_name || ';'
+            'DROP ' || drop_type || ' {{ database | upper }}.' || table_schema || '.' || table_name || ';' as drop_query
         from {{ database }}.information_schema.tables 
         where table_schema = upper('{{ schema }}')
         and last_altered <= current_date - {{ days }} 
