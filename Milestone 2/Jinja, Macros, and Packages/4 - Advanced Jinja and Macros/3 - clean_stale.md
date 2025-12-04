@@ -41,3 +41,6 @@ Create a new macro under the `macros` folder and name it clean_stale.sql.
     
 {% endmacro %} 
 ```
+
+> [!TIP]
+> You can run a macro with arguments using `dbt run-operation clean_stale_models --args '{'dry_run'='False'}'`
