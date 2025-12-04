@@ -1,4 +1,4 @@
-## clean_stale macro
+## clean_stale_models macro
 
 The purpose of this macro is to:
 
