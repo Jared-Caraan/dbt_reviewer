@@ -2,6 +2,8 @@
 
 The purpose of this macro is to unionize tables that has names which complies with the given prefix.
 
+Create a new macro under the `macros` folder and name it union_tables_by_prefix.sql.
+
 **union_tables_by_prefix macro code:**
 
 ```sql
