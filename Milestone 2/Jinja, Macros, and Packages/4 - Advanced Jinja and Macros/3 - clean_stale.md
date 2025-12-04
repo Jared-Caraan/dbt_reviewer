@@ -6,3 +6,5 @@ The purpose of this macro is to:
 2. finds objects that are > 1 week old (no longer maintained)
 3. generates automated drop statements
 4. has the ability to execute those drop statements
+
+Create a new macro under the `macros` folder and name it clean_stale.sql.
