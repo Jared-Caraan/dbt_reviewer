@@ -33,6 +33,7 @@ The purpose of this macro is to unionize tables that has names which complies wi
 }}
 ```
 
+
 > [!WARNING]
 > The macro `get_relations_by_prefix` will soon be deprecated in favor of the more flexible `get_relations_by_pattern macro`
 
