@@ -26,9 +26,6 @@ If your dbt project has a custom macro called `generate_schema_name`, dbt will u
 > [!WARNING]
 > Don't replace `default_schema` in the macro
 
-**Resources**
-- [Custom schema names](https://docs.getdbt.com/docs/build/custom-schemas)
-
 ## Customizing schema name per environment
 
 You can do this by configuring **environment variables**
@@ -56,3 +53,7 @@ You can do this by configuring **environment variables**
 
 {%- endmacro %}
 ```
+
+**Resources**
+- [Custom schema names](https://docs.getdbt.com/docs/build/custom-schemas)
+- [Environment variables](https://docs.getdbt.com/docs/build/environment-variables)
