@@ -14,6 +14,8 @@ We could try widening the cutoff window!
 }}
 
 select * from {{ ref('fct_marketing_web_analysis') }}
+{% if is_incremental() %}
 where
-updated_at >= (select max(updated_at) from {{this}})
+updated_at >= dateadd(day, -3, (select max(updated_at) from {{ this }}))
+{% endif %}
 ```
