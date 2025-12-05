@@ -43,7 +43,7 @@ You can do this by configuring **environment variables**
 {% macro generate_schema_name(custom_schema_name, node) -%}
 
     {%- set default_schema = target.schema -%}
-    {%- set env = env_var('DBT_KEY') -%}
+    {%- set env = env_var('DBT_ENV_NAME') -%}
     {%- if custom_schema_name is none or env != 'prod' -%}
 
         {{ default_schema }}
