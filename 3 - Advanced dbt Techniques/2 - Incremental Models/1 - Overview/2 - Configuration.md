@@ -53,3 +53,6 @@ updated_at >= (select max(updated_at) from {{this}})
 
 > [!NOTE]
 > When you click **Preview** on an incremental model, it will show you the new rows only. But it will materialize all old + new rows in the data platform.
+
+**Resource**
+- [Configure incremental models](https://docs.getdbt.com/docs/build/incremental-models)
