@@ -44,7 +44,7 @@ You can do this by configuring **environment variables**
 
     {%- set default_schema = target.schema -%}
     {%- set env = env_var('DBT_KEY') -%}
-    {%- if custom_schema_name is none -%}
+    {%- if custom_schema_name is none or env != 'prod' -%}
 
         {{ default_schema }}
 
