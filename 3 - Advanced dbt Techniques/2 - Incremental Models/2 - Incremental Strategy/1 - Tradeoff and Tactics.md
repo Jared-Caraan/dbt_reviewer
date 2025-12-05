@@ -25,6 +25,7 @@ But a wider lookback can lead to duplicate records since the where clause may ca
 <img width="840" height="395" alt="image" src="https://github.com/user-attachments/assets/73be06d9-fe2b-4c9a-90d2-32ddb8e42195" />
 
 We want dbt to replace existing rows that were updated and insert new ones into the overlap window.
+<hr>
 
 **Handling late arriving data: `unique_key`**
 
