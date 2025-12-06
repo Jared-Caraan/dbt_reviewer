@@ -14,9 +14,9 @@ models:
 **Model-level configuration**
 ```sql
 {{ config(
-    materialized="incremental",
+    materialized = "incremental",
     unique_key = 'date_day',
-    on_schema_change="fail",
+    on_schema_change = "fail",
 ) }}
 ```
 
