@@ -67,3 +67,6 @@ Capturing history can be dependent on how your job is scheduled.
 <img width="1403" height="357" alt="image" src="https://github.com/user-attachments/assets/470c1ce3-1ae4-4a5c-b63a-22b620956a6c" />
 
 The solution for this is to run your snapshot as often as your source data changes!
+
+**Resource**
+- [Snapshot](https://docs.getdbt.com/docs/build/snapshots#what-are-snapshots)
