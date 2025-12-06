@@ -16,7 +16,7 @@
 
 select * from {{ ref("some_model") }}
 ```
-**Under the hood SQl**
+**Under the hood SQL**
 
 <img width="990" height="540" alt="image" src="https://github.com/user-attachments/assets/80c39dc3-3331-49e9-a2d8-f55c389438e3" />
 
