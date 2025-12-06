@@ -16,6 +16,9 @@
 
 select * from {{ ref("some_model") }}
 ```
+**Under the hood SQl**
+
+<img width="990" height="540" alt="image" src="https://github.com/user-attachments/assets/80c39dc3-3331-49e9-a2d8-f55c389438e3" />
 
 **Resource**
 - [Incremental strategies](https://docs.getdbt.com/docs/build/incremental-strategy)
