@@ -18,8 +18,8 @@ select * from {{ ref("some_model") }}
 ```
 
 **Under the hood SQL**
-<img width="1151" height="734" alt="image" src="https://github.com/user-attachments/assets/2217a5d1-1bd1-4284-92f3-abb8442e4dd4" />
 
+<img width="1151" height="734" alt="image" src="https://github.com/user-attachments/assets/2217a5d1-1bd1-4284-92f3-abb8442e4dd4" />
 
 **Resource**
 - [Incremental strategies](https://docs.getdbt.com/docs/build/incremental-strategy)
