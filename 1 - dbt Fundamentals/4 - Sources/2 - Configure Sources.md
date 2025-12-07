@@ -83,4 +83,4 @@ sources:
 
 ``name: orders`` - This is the name you'll use in the source function. It identifies the table name. The hardcoded value would be `raw.jaffle_shop_dataset.jaffle_orders_information_table`
 
-If there is no `identifier:`, then ``name: orders`` points to its literal table name. The hardcoded value would be `raw.jaffle_shop_dataset.orders`.
+If there is no `identifier:`, then ``name: orders`` will point to its literal table name. The hardcoded value would be `raw.jaffle_shop_dataset.orders`.
