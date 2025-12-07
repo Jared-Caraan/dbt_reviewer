@@ -50,9 +50,9 @@ dbt test --exclude source:*
 
 If any of the tests on sources fails, how will dbt handle the rest of the commands?
 
-a. dbt will still execute dbt run AND dbt test --exclude source:*
-b. dbt will still execute dbt run BUT will not execute dbt test --exclude source:*
-c. dbt will still execute dbt test --exclude source:* BUT will not execute dbt run
+a. dbt will still execute dbt run AND dbt test --exclude source:*\
+b. dbt will still execute dbt run BUT will not execute dbt test --exclude source:*\
+c. dbt will still execute dbt test --exclude source:* BUT will not execute dbt run\
 d. dbt will not execute any further commands
 
 Answer: d
