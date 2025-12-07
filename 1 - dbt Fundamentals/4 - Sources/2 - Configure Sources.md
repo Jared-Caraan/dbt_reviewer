@@ -65,6 +65,7 @@ from {{ source('stripe', 'payment') }}
 
 You can also write source configurations using **codegen** package from [hub.getdbt.com](http://hub.getdbt.com/)
 <hr>
+
 **Example**
 
 ```yaml
