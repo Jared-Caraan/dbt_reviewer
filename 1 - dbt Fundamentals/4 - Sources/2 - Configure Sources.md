@@ -64,6 +64,8 @@ from {{ source('stripe', 'payment') }}
 7. Commit and merge once done.
 
 You can also write source configurations using **codegen** package from [hub.getdbt.com](http://hub.getdbt.com/)
+<hr>
+**Example**
 
 ```yaml
 sources:
@@ -80,4 +82,4 @@ sources:
 
 ``name: orders`` - This is the name you'll use in the source function. It identifies the table name. The hardcoded value would be `raw.jaffle_shop_dataset.jaffle_orders_information_table`
 
-If there are no `identifier:`, then ``name: orders`` points to its literal table name. The hardcoded value would be `raw.jaffle_shop_dataset.orders`.
+If there is no `identifier:`, then ``name: orders`` points to its literal table name. The hardcoded value would be `raw.jaffle_shop_dataset.orders`.
