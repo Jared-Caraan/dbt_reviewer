@@ -24,3 +24,25 @@
     - Put the flag `--full-refresh` on the commands (`dbt build --full-refresh`)
     - Schedule it once a week only
 3. Hit **Save**
+
+**Creating a time-sensitive job**
+
+1. **Create job** -> **Deploy job**
+2. Fill out the configurations necessary to set up a deployment type environment.
+    - Job name - Fct Orders Hourly
+    - Same setup with standard job except for run timeout, commands and scheduling
+    - Provide a **Run Timeout** value in seconds (e.g. 3550 seconds)
+    - Put the flag `--select` on the commands (`dbt build --select +fct_orders+`)
+    - You can schedule it hourly on business days
+3. Hit **Save**
+
+**Creating a fresher rebuild job**
+
+1. **Create job** -> **Deploy job**
+2. Fill out the configurations necessary to set up a deployment type environment.
+    - Job name - Fresher Rebuild
+    - Same setup with standard job except for commands and scheduling
+    - In **Defer to a previous run state?**, you can choose and defer perhaps to your standard run if it's ran in the middle of the day and want to check the source freshness data from the standard run in the morning.
+    - In the commands, you can put something like `dbt build --select source_status:fresher+`
+    - You can schedule it once a day on business days
+3. Hit **Save**
