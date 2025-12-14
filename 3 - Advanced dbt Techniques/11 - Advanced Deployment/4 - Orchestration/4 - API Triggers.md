@@ -37,10 +37,12 @@ This is a tool that's available in many machiens and it is quite a famous way to
 
 Enter the command as it is, then hit Enter. Verify if the status is successful. Then, refresh your run history and you'll see that your job is running.
 
+##
 **Python**
 
 <img width="1099" height="733" alt="image" src="https://github.com/user-attachments/assets/fca9955d-0132-4a24-a439-943e4f1a0f1f" />
 
+##
 **dbt-cloud-cli**
 
 Instead of providing the full URL of the API endpoint, we just need to provide our account ID, job ID, and the cause.
