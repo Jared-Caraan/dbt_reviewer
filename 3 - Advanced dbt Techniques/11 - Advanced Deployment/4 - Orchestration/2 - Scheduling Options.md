@@ -33,7 +33,7 @@ Translation: Runs every 30 minutes, between 6 AM and 11 PM UTC, every day, every
 
 This is extremely useful for slim CI. This means that whenever a pull request is created in the Git provider, there will be a job automatically triggered in dbt Cloud, and get results of this job showing in the git provider.
 
-We also have the abilitym if we use a custom branch to say that we only want to trigger a job when a PR is created to merge into a custom branch.
+We also have the ability if we use a custom branch to say that we only want to trigger a job when a PR is created to merge into a custom branch.
 
 ### API
 
