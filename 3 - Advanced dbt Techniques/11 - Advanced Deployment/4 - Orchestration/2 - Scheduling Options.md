@@ -24,6 +24,7 @@ For each of those values, we can provide different parameters.
 If we provide a star, it means that this is going to run for every occurrence of the parameter. The other option is to use comma to provide a list of values - `2,6` means 2 and 6. Meanwhile, dash represents a range of values  - `2-6` means 2,3,4,5,6. The slash parameter means at _regular intervals_.
 
 **Example**
+
 <img width="336" height="126" alt="image" src="https://github.com/user-attachments/assets/87d4a9e9-a657-46fe-b6f7-b496d438e9a9" />
 
 Translation: Runs every 30 minutes, between 6 AM and 11 PM UTC, every day, every month, from Monday to Friday.
