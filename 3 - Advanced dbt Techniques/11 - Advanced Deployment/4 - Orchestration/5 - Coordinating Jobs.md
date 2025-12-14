@@ -19,6 +19,7 @@ Example: Incremental run from Monday to Saturday, and a full-refresh on Sunday.
 
 <img width="668" height="326" alt="image" src="https://github.com/user-attachments/assets/65861d1b-2e20-4f06-8ce5-5f53108c10f1" />
 
+##
 **Full-refresh job**
 1. Go to job settings.
 2. Command is `dbt build --full-refresh`
@@ -47,8 +48,10 @@ Plan: Split the incremental agenda into two different jobs. One is running at ev
 <img width="688" height="325" alt="image" src="https://github.com/user-attachments/assets/f3281d65-a257-4230-a28e-cfc090afdb8c" />
 
 Use CRON schedule for the minutes part.
+
 <img width="508" height="392" alt="image" src="https://github.com/user-attachments/assets/44d999f6-bdf2-4425-a73e-9577b1b8c391" />
 
+##
 **The every 30-minute job on Sunday**
 
 1. Go to job settings.
@@ -56,5 +59,6 @@ Use CRON schedule for the minutes part.
 3. Configure to schedule it only on Sunday. Then avoid the full-refresh schedule and start again at 8 am for every 15 and 45-minute mark. (Refer to the plan above).
 
 Use CRON schedule to configure the schedule
+
 <img width="506" height="352" alt="image" src="https://github.com/user-attachments/assets/6a0f2b0b-97bc-47e3-b970-2a52e2b6f79c" />
 
