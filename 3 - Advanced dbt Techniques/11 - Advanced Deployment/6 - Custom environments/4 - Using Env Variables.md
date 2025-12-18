@@ -40,3 +40,31 @@ Let's try to change this configuration using environment variables.
     - Development - dev
     - QA - qa (depends if you have QA env in your project)
     - Production - prod
+5. Add a logic that would produce only the **custom_schema_name** only in production.
+
+    <details>
+    <summary>Revised Generate Schema Name Macro</summary>
+    
+    **generate_schema_name.sql**
+    
+    ```sql
+    {% macro generate_schema_name(custom_schema_name, node) -%}
+
+        {%- set default_schema = target.schema -%}
+        {%- if custom_schema_name is none -%}
+    
+            {{ default_schema }}
+    
+        {%- elif env_var("DBT_ENV_NAME") in ['prod'] -%}
+    
+            {{ custom_schema_name | trim }}
+    
+        {%- else -%}
+    
+            {{ default_schema }}_{{ custom_schema_name | trim }}
+    
+        {%- endif -%}
+    
+    {%- endmacro %}
+    ```
+    </details>
