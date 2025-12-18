@@ -71,3 +71,6 @@ Let's try to change this configuration using `target.name`.
     {%- endmacro %}
     ```
     </details>
+
+**Resources**
+- [target variable](https://docs.getdbt.com/reference/dbt-jinja-functions/target)
