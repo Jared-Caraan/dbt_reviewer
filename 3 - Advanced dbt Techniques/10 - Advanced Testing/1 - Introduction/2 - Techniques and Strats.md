@@ -37,15 +37,15 @@
     </details>
 
 ## Testing Strategies
-**Test on a Schedule**
+**Test on a Schedule** \
 The ultimate goal is a standalone test w/ expected results running automatically on a schedule.
 
-**Take Action!**
+**Take Action!** \
 Failures should be fixed immediately or silenced. If there is too much noise, tests become meaningless.
 
 ## What makes a good test?
-**Automated** - low effort / repeatable
-**Fast** - if testing takes too long, no one will do it
-**Reliable** - believe them when they say something doesn't work
-**Informative** - leaves you clues about what to fix based on the error
+**Automated** - low effort / repeatable \
+**Fast** - if testing takes too long, no one will do it \
+**Reliable** - believe them when they say something doesn't work \
+**Informative** - leaves you clues about what to fix based on the error \
 **Focused** - every test should validate one assumption
