@@ -16,3 +16,21 @@ There are four key use cases for testing:
 ## Test Coverage
 
 Establish norms in your company for what to test and when to test. Codify these norms using the package: [`dbt_meta_testing`](https://hub.getdbt.com/tnightengale/dbt_meta_testing/latest/) to ensure each object has the required tests.
+
+##
+**Some other packages to consider – Python**
+- [dbt-coverage](https://github.com/slidoapp/dbt-coverage)
+    - Compute coverage from [catalog.json](https://docs.getdbt.com/reference/artifacts/catalog-json) and [manifest.json](https://docs.getdbt.com/reference/artifacts/manifest-json) files found in a dbt project, e.g. jaffle_shop.
+- [pre-commit-dbt](https://github.com/offbi/pre-commit-dbt)
+    - A comprehensive list of hooks to ensure the quality of your dbt projects.
+    - check-model-has-tests: Check the model has a number of tests.
+    - check-source-has-tests-by-name: Check the source has a number of tests by test name.
+    - See [Enforcing rules at scale with pre-commit-dbt](https://docs.getdbt.com/blog/enforcing-rules-pre-commit-dbt)
+
+**Some other packages to consider – dbt Packages**
+- [dbt_dataquality](https://learn.getdbt.com/learn/course/advanced-testing/introduction-to-advanced-testing-60mins/advanced-testing-overview?page=11#:~:text=consider%20%E2%80%93%20dbt%20Packages-,dbt_dataquality,-Access%20and%20report)
+    - Access and report on the outputs from dbt source freshness (sources.json and manifest.json) and dbt test (run_results.json and manifest.json)
+    - Optionally tag tests and visualize quality by type
+- [dbt-project-evaluator](https://learn.getdbt.com/learn/course/advanced-testing/introduction-to-advanced-testing-60mins/advanced-testing-overview?page=11#:~:text=dbt%2Dproject%2Devaluator)
+    - This package highlights areas of a dbt project that are misaligned with dbt Labs' best practices. Specifically, this package tests for:
+    - This package is in its early stages!
