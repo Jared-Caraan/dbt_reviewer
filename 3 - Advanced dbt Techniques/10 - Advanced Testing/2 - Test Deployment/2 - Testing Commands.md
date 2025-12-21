@@ -83,8 +83,8 @@ What this will do is materialize the results of the test into the data warehouse
 | --- | --- | --- |
 | `dbt run` <br> `dbt test` | `dbt test -s source:*` <br> `dbt run` <br> `dbt test --exclude source:*`| `dbt build --fail-fast` |
 
-**Good** - traditional run and test of all models
-**Better** - it's better to test all sources first, then run and test the models afterward
+**Good** - traditional run and test of all models \
+**Better** - it's better to test all sources first, then run and test the models afterward \
 **Best** - immediately cancels dbt run if a failure occurred unlike `dbt build` that will continue to run other unrelated models.
 
 **Resources**
