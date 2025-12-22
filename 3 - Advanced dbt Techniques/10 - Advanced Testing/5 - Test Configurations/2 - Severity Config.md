@@ -58,3 +58,25 @@ If we tried to increase the threshold:
 We will only receive a warning on the test column.
 
 <img width="878" height="312" alt="image" src="https://github.com/user-attachments/assets/40762ee3-4388-438a-8ecf-85cbb23cfe86" />
+
+##
+
+We can also apply severity configurations to singular tests.
+
+**assert_amount_is_greater_than_five.sql**
+```sql
+{{
+    config(
+        severity="warn"
+    )
+}}
+
+select
+  amount
+from {{ ref( 'fct_orders' ) }}
+where amount <= 5
+```
+
+And it will give us a warn as a result.
+
+<img width="831" height="616" alt="image" src="https://github.com/user-attachments/assets/8c25c47f-fc2c-45e9-882c-32353d2e2f22" />
