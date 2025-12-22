@@ -16,3 +16,28 @@ Copy the code from the [audit_helper page](https://hub.getdbt.com/dbt-labs/audit
 
 Let's say the team wants to refactor `fct_orders` to make it more optimal. Then they want to validate if the new version of the `fct_orders` has still the same relation to the older one despite the logic change.
 
+<details>
+<summary>Sample Usage</summary>
+
+```sql
+
+{% set old_relation = adapter.get_relation(
+      database = "old_database",
+      schema = "old_schema",
+      identifier = "fct_orders"
+) -%}
+
+{% set dbt_relation = ref('fct_orders') %}
+
+{{ audit_helper.quick_are_relations_identical(
+    a_relation = old_relation,
+    b_relation = dbt_relation,
+    columns = None
+) }}
+
+```
+</details>
+
+### [compare_and_classify_relation_rows](https://github.com/dbt-labs/dbt-audit-helper/tree/0.12.2/#compare_and_classify_relation_rows-source)
+
+If you want to compare two tables in a more granular manner, you can utilize this macro. So instead of simply telling us if our relations are identical or not, it will actually show us 20 rows per category (e.g. identical rows, mismatches, etc.).
