@@ -22,4 +22,6 @@ This is when you should consider adopting dbt Mesh. dbt Mesh is a pattern that e
 
 Enable domain level ownership of data - without compromising governance
 
-
+| What/Why | Example Tests |
+| --- | --- |
+| <ul><li>Assert something about the data that you think is true</li><li>Contents of the data</li><li>Constraints of the table</li><li>The grain of the table</li></ul> | <ul><li>`unique`</li><li>`not_null`</li><li>`accepted_values`</li><li>Imported package tests:<ul><li>`dbt_expectations.expect_column_proportion_of_unique_values_to_be_between`</li></ul></li></ul> |
