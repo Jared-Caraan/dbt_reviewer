@@ -45,6 +45,12 @@ models:
 
 ##
 
+What it looks like in the lineage.
+
+<img width="924" height="312" alt="image" src="https://github.com/user-attachments/assets/d87fddd0-f28d-4ad2-a552-d1d231380074" />
+
+##
+
 If models access a private model from a different group, your run will fail.
 
 <img width="860" height="131" alt="image" src="https://github.com/user-attachments/assets/0e9884cb-1812-4004-9d4f-3e8d833c7e7a" />
