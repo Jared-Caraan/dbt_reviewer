@@ -117,3 +117,21 @@ models:
     - To run all versions: `dbt run -select dim_customers`
     - To run a specific versions: `dbt run -select dim_customers_v2`
     - To run a the latest versions: `dbt run -select dim_customers version:latest`
+
+##
+
+### Deprecation date
+
+It is introduced to help data teams communicate when a specific model (or a version of a model) is no longer recommended for use and will eventually be removed.
+
+```yaml
+# models/schema.yml
+models:
+  - name: orders
+    latest_version: 2
+    versions:
+      - v: 1
+        # Users calling {{ ref('orders', version=1) }} will see a warning
+        deprecation_date: 2024-12-31 
+      - v: 2
+```
