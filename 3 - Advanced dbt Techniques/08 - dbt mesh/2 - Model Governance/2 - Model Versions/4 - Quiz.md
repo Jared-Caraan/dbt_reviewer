@@ -17,4 +17,4 @@ b. Both will run.\
 c. The old version of the model.\
 d. The new version of the model.
 
-Answer: 
+Answer: d
