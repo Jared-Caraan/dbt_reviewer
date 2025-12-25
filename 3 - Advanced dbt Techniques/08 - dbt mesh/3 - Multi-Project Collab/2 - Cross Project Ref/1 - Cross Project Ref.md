@@ -26,3 +26,6 @@ It's really important to note that the project name must be the name that is dec
 Syntax: `{{ ref('project_name', 'model_name') }}`
 
 Once the project is defined in the `dependencies.yml` file, you are ready to use the cross-project ref macro.
+
+## Related Resources
+- [Project dependencies](https://docs.getdbt.com/docs/mesh/govern/project-dependencies#example)
