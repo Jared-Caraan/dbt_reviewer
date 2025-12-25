@@ -43,6 +43,12 @@ models:
           access: public
 ```
 
+##
+
+If models access a private model from a different group, your run will fail.
+
+<img width="860" height="131" alt="image" src="https://github.com/user-attachments/assets/0e9884cb-1812-4004-9d4f-3e8d833c7e7a" />
+
 ## Related Resources
 - [Groups](https://docs.getdbt.com/docs/build/groups#:~:text=By%20default%2C%20all%20models%20within,its%20group%20can%20reference%20it.)
 - [Access modifiers](https://docs.getdbt.com/docs/collaborate/govern/model-access#access-modifiers)
