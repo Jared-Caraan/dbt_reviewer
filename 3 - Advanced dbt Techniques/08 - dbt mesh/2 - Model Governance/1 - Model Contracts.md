@@ -52,6 +52,16 @@ You have a rather large dbt Cloud project (1000+ models). There are several team
         - constraints are a pre-flight check; if a particular constraint is enforced by your platform, the "bad data" won't even be able to get into your model
         - dbt data tests are post-hoc checks; bad data can get into your model and the tests lets you know about it
 
+##
+
+This is what happens when a run failed due to wrong data type constraint:
+
+<img width="1008" height="691" alt="image" src="https://github.com/user-attachments/assets/30cce1e6-97fd-4fbd-a9ad-6ae6fc296998" />
+
+This is what happens when a run failed due to missing column constraint:
+
+<img width="962" height="604" alt="image" src="https://github.com/user-attachments/assets/f0eb6a5a-cae8-4365-ae7e-174d65df5485" />
+
 ## Related Resources
 - [model contracts](https://docs.getdbt.com/docs/collaborate/govern/model-contracts)
 - [constraints](https://docs.getdbt.com/reference/resource-properties/constraints)
