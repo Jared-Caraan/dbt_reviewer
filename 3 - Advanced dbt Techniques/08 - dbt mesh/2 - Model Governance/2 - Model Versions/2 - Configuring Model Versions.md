@@ -108,7 +108,7 @@ models:
                   data_type: text
 ```
 
-> [!WARN]
+> [!WARNING]
 > A common pattern is to let `v1` keep its versioned name (`orders_v1`) while aliasing only the `latest_version` to the clean name (`orders`) once it's ready for production.
 
 ##
