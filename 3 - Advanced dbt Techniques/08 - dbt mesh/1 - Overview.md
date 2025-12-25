@@ -22,6 +22,23 @@ This is when you should consider adopting dbt Mesh. dbt Mesh is a pattern that e
 
 Enable domain level ownership of data - without compromising governance
 
-| What/Why | Example Tests |
+| Domain teams get: | Central data teams get |
 | --- | --- |
-| <ul><li>Assert something about the data that you think is true</li><li>Contents of the data</li><li>Constraints of the table</li><li>The grain of the table</li></ul> | <ul><li>`unique`</li><li>`not_null`</li><li>`accepted_values`</li><li>Imported package tests:<ul><li>`dbt_expectations.expect_column_proportion_of_unique_values_to_be_between`</li></ul></li></ul> |
+| <ul><li>autonomy to ship data products faster</li><li>ability to share with and reference from other teams</li><li>confidence that nothing breaks unexpectedly</li></ul> | <ul><li>visibility into the full lineage of transformations</li><li>running in a single platform (dbt)</li><li>without acting as a bottleneck for every domain team</li></ul> |
+
+##
+
+### Manage interfaces with model governance
+- Every model can have a **contract** that define guarantees around data shape.
+- Models can have **private** or **public access levels**, as well as be **grouped**. Public models can be reused across projects.
+- When a model's contract changes in a way that's backwards incompatible, it should be reflected with new a **version**.
+
+<img width="725" height="372" alt="image" src="https://github.com/user-attachments/assets/3e04415d-4e6a-43e9-8f72-edc59f1e0076" />
+
+##
+
+### Discover assets and collaborate across multiple projects
+- As a model producer: Share **public models** for use by others in the organization.
+- As a model consumer: Reference models from another team's project, just by writing ref. No need to share source code or surface any additional complexity.
+
+<img width="1144" height="385" alt="image" src="https://github.com/user-attachments/assets/0d23f4fb-44a5-4769-a577-0ed812dbfbc9" />
