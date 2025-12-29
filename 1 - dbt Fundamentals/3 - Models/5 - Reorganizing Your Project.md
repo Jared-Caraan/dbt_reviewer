@@ -1,6 +1,6 @@
 ## Reorganizing dbt Project
 1. Delete unused or unneeded folders/files.
-2. Rename files according to their naming convention e.g. stg_, fct_, dim_, int_, etc.
+2. Rename files according to their naming convention e.g. `stg_`, `fct_`, `dim_`, `int_`, etc.
 3. Create folders according to their maturity e.g. staging, marts, etc.
 4. Move your models to their respective folders.
 <img width="367" height="370" alt="image" src="https://github.com/user-attachments/assets/ae28ff0e-98a6-4110-97ad-aad7c3fc0dcb" />
