@@ -13,7 +13,7 @@
 ```
 - When `dbt run` is executing, dbt is wrapping the select statement in the correct DDL/DML to build that model as a table/view. If that model already exists in the data warehouse, dbt will automatically drop that table or view before building the new database object.
 
-*Note: If you are on BigQuery, you may need to run `dbt run --full-refresh` for this to take effect.
+    *Note: If you are on BigQuery, you may need to run `dbt run --full-refresh` for this to take effect.
 
 - The DDL/DML that is being run to build each model can be viewed in the logs through the dbt interface or the target folder.
 <img width="1320" height="744" alt="image" src="https://github.com/user-attachments/assets/b75566a7-73a0-4fa5-9a8c-71e45ea9327a" />
