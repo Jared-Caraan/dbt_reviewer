@@ -81,9 +81,9 @@ Answer: d
 ##
 What is the dbt best practice for testing your primary keys?
 
-a. Apply a unique test to your primary keys.
-b. Apply a not_null test to your primary keys.
-c. Apply a unique and not_null test to your primary keys.
+a. Apply a unique test to your primary keys.\
+b. Apply a not_null test to your primary keys.\
+c. Apply a unique and not_null test to your primary keys.\
 d. Apply a relationships test to your primary keys to ensure referential integrity to a foreign key.
 
 Answer: c
@@ -93,8 +93,8 @@ Assume your project only has models and sources and data tests configured on mod
 
 How does the dbt build command work?
 
-a. dbt build will first test your sources, then materialize all your models, and then test all your models.
-b. dbt build will first test your sources, then materialize and test each model in DAG order.
+a. dbt build will first test your sources, then materialize all your models, and then test all your models.\
+b. dbt build will first test your sources, then materialize and test each model in DAG order.\
 c. dbt build will first materialize your models, then test your sources, and then test your models.
 
 Answer: b
