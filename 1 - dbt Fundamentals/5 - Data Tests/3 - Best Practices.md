@@ -4,7 +4,7 @@
 You should test your sources to validate the quality of your raw data. These tests should be simple and focused on the basics.
 
 ### When do you test your models?
-You should test your models to validate your transformations.These tests check the integrity of your dbt code and the business logic that you have applied.
+You should test your models to validate your transformations. These tests check the integrity of your dbt code and the business logic that you have applied.
 
 > [!NOTE]
 > Test sources for data integrity and test models for transformation integrity.
