@@ -6,8 +6,8 @@
 <img width="367" height="370" alt="image" src="https://github.com/user-attachments/assets/ae28ff0e-98a6-4110-97ad-aad7c3fc0dcb" />
 
 5. For the branch name, you can prefix it by `feat/` then a brief working title.
-6. In dbt_project.yml, ensure that the project name in Line 5 and its corresponding value under `models:` are descriptive enough.
-7. In dbt_project.yml, remove any configurations that pertains to deleted folders.
+6. In `dbt_project.yml`, ensure that the project name in Line 5 and its corresponding value under `models:` are descriptive enough.
+7. In `dbt_project.yml`, remove any configurations that pertains to deleted folders.
 8. Staging models as a best practice should be a view.
 <img width="824" height="373" alt="image" src="https://github.com/user-attachments/assets/54f73038-9a02-4b43-99f0-c277881ccc40" />
 
