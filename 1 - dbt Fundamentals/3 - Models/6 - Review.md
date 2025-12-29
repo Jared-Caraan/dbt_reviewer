@@ -4,11 +4,11 @@
 - In dbt Studio, the Preview button will run this select statement against your data warehouse. The results shown here are equivalent to what this model will return once it is materialized.
 - After constructing a model, `dbt run` in the command line will actually materialize the models into the data warehouse. The default materialization is a view.
 - The materialization can be configured as a table with the following configuration block at the top of the model file:
-```jinja
+```sql
 {{ config(materialized='table') }}
 ```
 - The same applies for configuring a model as a view:
-```jinja
+```sql
 {{ config(materialized='view') }}
 ```
 - When `dbt run` is executing, dbt is wrapping the select statement in the correct DDL/DML to build that model as a table/view. If that model already exists in the data warehouse, dbt will automatically drop that table or view before building the new database object. *Note: If you are on BigQuery, you may need to run `dbt run --full-refresh` for this to take effect.
