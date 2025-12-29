@@ -38,6 +38,7 @@
 
 #### Environments
 <p> A way in dbt to separate jobs and execution in development and production. Two main types of env: **DEV** and **PROD**. Only one **DEV** environment exists on a project. The other types of environments are deployment environments and you can have as many as you want on a project. These deployment environments are often linked to a branch. </p>
+
 Functionalities:
 - Scheduled jobs
 - Job runs
@@ -45,6 +46,7 @@ Functionalities:
 
 ## DBT Studio
 <p>This is the workspace area where the development occurs.</p>
+
 Functionalities:
 - File explorer
   - dbt_packages and target folder doesn't show up on the git repository unlike any other folder.
