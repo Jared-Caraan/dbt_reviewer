@@ -2,6 +2,7 @@
 - [List of dbt commands](https://docs.getdbt.com/category/list-of-commands)
 - [dbt node selection syntax](https://docs.getdbt.com/reference/node-selection/syntax)
 - [hub.getdbt.com](http://hub.getdbt.com/)
+- [testing documentation](https://docs.getdbt.com/reference/node-selection/test-selection-examples)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
