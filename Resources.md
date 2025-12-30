@@ -1,5 +1,7 @@
 ## Tools
 - [hub.getdbt.com](http://hub.getdbt.com/)
+
+## Testing
 - [testing documentation](https://docs.getdbt.com/reference/node-selection/test-selection-examples)
 
 ## Commands & Syntax
