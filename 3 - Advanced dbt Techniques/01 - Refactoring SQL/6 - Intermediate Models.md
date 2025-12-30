@@ -246,6 +246,8 @@
    ```
    </details>
 
+##
+
 **Moving logic to intermediate models**
 
 Now we're going to break up our code into an intermediate model.
