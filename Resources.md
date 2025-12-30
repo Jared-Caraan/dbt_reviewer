@@ -18,6 +18,8 @@
 - [delete+insert](https://docs.getdbt.com/docs/build/incremental-strategy#deleteinsert)
 - [insert_overwrite](https://docs.getdbt.com/docs/build/incremental-strategy#insert_overwrite)
 - [BigQuery partition_by](https://docs.getdbt.com/reference/resource-configs/bigquery-configs#using-table-partitioning-and-clustering)
+- [microbatch as a strategy](https://docs.getdbt.com/docs/build/incremental-strategy#microbatch)
+- [microbatch incremental models](https://docs.getdbt.com/docs/build/incremental-microbatch#what-is-microbatch-in-dbt)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
