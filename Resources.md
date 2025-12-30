@@ -50,3 +50,6 @@
 ## Model Contracts
 - [model contracts](https://docs.getdbt.com/docs/collaborate/govern/model-contracts)
 - [constraints](https://docs.getdbt.com/reference/resource-properties/constraints)
+
+## Model Versions
+- [Model Versions](https://docs.getdbt.com/docs/mesh/govern/model-versions)
