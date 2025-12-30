@@ -66,4 +66,4 @@ You'll also see the lineage graph being updated.
 
 I want to make sure the data my exposures are using is up to date, so I have a really great command I can use. And that command is `dbt run -s +exposure:orders_data`. And what this command will do is it will run everything upstream of my exposure named orders data.
 
-If I wanted to run everyting upstream of every exposure, I'd use this command instead - `dbt run -s +exposure:*`
+If I wanted to run everything upstream of every exposure, I'd use this command instead - `dbt run -s +exposure:*`
