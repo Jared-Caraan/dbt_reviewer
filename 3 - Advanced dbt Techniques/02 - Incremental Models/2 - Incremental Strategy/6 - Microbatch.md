@@ -31,6 +31,7 @@ select * from {{ ref("some_model") }}
 <img width="1145" height="194" alt="image" src="https://github.com/user-attachments/assets/f9a3bd2c-fb11-4175-9a58-cb9e848431c1" />
 
 **Benefits**
+
 What's really cool about the microbatch strategy is that each batch corresponds to a bounded time period. The microbatch strategy categorizes data by which batch it's in. So each batch is a unit of data that can be built or replaced on its own, which means that you can run specific batches separately if you really want to. Or if you want to, you can retry failed batches. If I wanted to run only specific batches, I might use a command like this: `dbt run --select fct_orders --event-time-start "2020-04-01" --event-time-end "2020-04-05"`
 
 **Resource**
