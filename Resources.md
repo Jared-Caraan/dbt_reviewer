@@ -20,6 +20,7 @@
 - [BigQuery partition_by](https://docs.getdbt.com/reference/resource-configs/bigquery-configs#using-table-partitioning-and-clustering)
 - [microbatch as a strategy](https://docs.getdbt.com/docs/build/incremental-strategy#microbatch)
 - [microbatch incremental models](https://docs.getdbt.com/docs/build/incremental-microbatch#what-is-microbatch-in-dbt)
+- [Schema changes](https://docs.getdbt.com/docs/build/incremental-models#what-if-the-columns-of-my-incremental-model-change)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
