@@ -3,6 +3,9 @@
 - [dbt node selection syntax](https://docs.getdbt.com/reference/node-selection/syntax)
 - [hub.getdbt.com](http://hub.getdbt.com/)
 - [testing documentation](https://docs.getdbt.com/reference/node-selection/test-selection-examples)
+- [run_query macro documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/run_query)
+- [log macro documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/log)
+- [target variable documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/target)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
