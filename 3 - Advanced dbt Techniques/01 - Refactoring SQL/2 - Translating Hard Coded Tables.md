@@ -9,28 +9,28 @@ The first thing we'll do with our legacy code is look for all of our hardcoded t
 5. Create a file under `models > staging > stripe` called `_sources.yml`.
 6. Declare configurations for the corresponding source in each file:
 
-**models/staging/jaffle_shop/_sources.yml**
-```yaml
-version: 2
-
-sources:
-  - name: jaffle_shop
-    database: raw
-    tables:
-      - name: customers
-      - name: orders
-```
-**models/staging/stripe/_sources.yml**
-```yaml
-version: 2
-
-sources:
-  - name: stripe
-    database: raw
-    tables:
-      - name: payment
-
-```
+    **models/staging/jaffle_shop/_sources.yml**
+    ```yaml
+    version: 2
+    
+    sources:
+      - name: jaffle_shop
+        database: raw
+        tables:
+          - name: customers
+          - name: orders
+    ```
+    **models/staging/stripe/_sources.yml**
+    ```yaml
+    version: 2
+    
+    sources:
+      - name: stripe
+        database: raw
+        tables:
+          - name: payment
+    
+    ```
 7. Now that your sources are configured, open your customer_orders.sql file and replace any hardcoded references (i.e, raw.jaffle_shop.customers) with a source function, referencing the sources you have set up.
 ```sql
 select 
