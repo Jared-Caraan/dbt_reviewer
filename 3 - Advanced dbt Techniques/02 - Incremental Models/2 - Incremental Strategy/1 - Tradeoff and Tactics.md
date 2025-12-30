@@ -89,7 +89,7 @@ Not-so-good candidates:
 - A small table
 - Data changes constantly: new columns, renamed columns, etc.
 - Data is updated in unpredictable ways
-- Transfomations perform comparisons or calculations that require other rows
+- Transformations perform comparisons or calculations that require other rows
 <hr>
 
 **Tactics**
