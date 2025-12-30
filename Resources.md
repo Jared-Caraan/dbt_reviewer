@@ -46,3 +46,7 @@
 
 ## Exposures
 - [Exposures](https://docs.getdbt.com/docs/build/exposures)
+
+## Model Contracts
+- [model contracts](https://docs.getdbt.com/docs/collaborate/govern/model-contracts)
+- [constraints](https://docs.getdbt.com/reference/resource-properties/constraints)
