@@ -28,4 +28,4 @@ models:
 - sync_all_columns: Adds any new columns to the existing table, and removes any columns that are now missing. Not that this is inclusive of data type changes. On BigQuery, changing column types requires a full table scan; be mindful of the trade-offs when implementing.
 
 **Resources:**
-[Schema changes](https://docs.getdbt.com/docs/build/incremental-models#what-if-the-columns-of-my-incremental-model-change)
+- [Schema changes](https://docs.getdbt.com/docs/build/incremental-models#what-if-the-columns-of-my-incremental-model-change)
