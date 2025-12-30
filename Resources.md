@@ -57,3 +57,4 @@
 ## Model Governance
 - [Groups](https://docs.getdbt.com/docs/build/groups#:~:text=By%20default%2C%20all%20models%20within,its%20group%20can%20reference%20it.)
 - [Access modifiers](https://docs.getdbt.com/docs/collaborate/govern/model-access#access-modifiers)
+- [Project dependencies](https://docs.getdbt.com/docs/mesh/govern/project-dependencies#example)
