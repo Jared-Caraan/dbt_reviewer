@@ -16,6 +16,8 @@
 - [append](https://docs.getdbt.com/docs/build/incremental-strategy#append)
 - [merge](https://docs.getdbt.com/docs/build/incremental-strategy#merge)
 - [delete+insert](https://docs.getdbt.com/docs/build/incremental-strategy#deleteinsert)
+- [insert_overwrite](https://docs.getdbt.com/docs/build/incremental-strategy#insert_overwrite)
+- [BigQuery partition_by](https://docs.getdbt.com/reference/resource-configs/bigquery-configs#using-table-partitioning-and-clustering)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
