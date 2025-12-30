@@ -7,6 +7,7 @@ Incremental models introduce tradeoffs.
 - Prioritizing correctness can negate performance gains from incrementality.
 
 **How do I choose which models to materialize as incrementals?**
+
 Good candidates:
 
 - Immutable event streams: tall and skinny tables, append-only, no updates
