@@ -172,7 +172,7 @@ final as (
        {% endif -%}
  
        {%- endfor %}
-   from <code class="language-sql">payments</code>
+   from payments
    group by 1
 )
  
