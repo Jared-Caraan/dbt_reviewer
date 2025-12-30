@@ -9,7 +9,7 @@ The other option is what we call fully specified, where you need to specify all 
 ##
 
 ### Adding Model Versions
-**Step 1:** Create file `model_v2.sql`. Add a **latest_version:** property to your models' contract. (Now we have two versions of `dim_customers.sql`: `dim_customers.sql` and `dim_customers_v2.sql`). 
+**Step 1:** Create file `<model>_v2.sql`. Add a **latest_version:** property to your models' contract. (Now we have two versions of `dim_customers.sql`: `dim_customers.sql` and `dim_customers_v2.sql`). 
 
 latest_version will tell dbt which version of the model you're using when you reference dim_customers
 
