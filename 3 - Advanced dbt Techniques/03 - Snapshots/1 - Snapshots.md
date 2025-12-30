@@ -28,6 +28,8 @@ snapshots:
 
 Because snapshots can't be rebuilt, it's a good idea to put your snapshots in a separate schema so end users know they're special. From there, you might want to set different privileges on your snapshots compared to your models and maybe even run them as a different user or role. So this way, it'll be very difficult to drop a snapshot unless you're very sure that you want to.
 
+##
+
 ### Snapshot Strategies
 
 Snapshot "strategies" define how dbt knows if a row has changed: dbt supports two snapshot update strategies:
