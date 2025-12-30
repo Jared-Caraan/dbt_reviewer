@@ -14,6 +14,7 @@
 - [Configure incremental models](https://docs.getdbt.com/docs/build/incremental-models)
 - [Incremental strategies](https://docs.getdbt.com/docs/build/incremental-strategy)
 - [append](https://docs.getdbt.com/docs/build/incremental-strategy#append)
+- [merge](https://docs.getdbt.com/docs/build/incremental-strategy#merge)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
