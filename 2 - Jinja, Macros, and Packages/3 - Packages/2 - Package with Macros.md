@@ -58,4 +58,5 @@ group by 1,2
 </details>
 
 To see the macro description: [generate_surrogate_key description](https://github.com/dbt-labs/dbt-utils/tree/1.3.2/?tab=readme-ov-file#generate_surrogate_key-source)
+
 To see the code in detail: [generate_surrogate_key macro](https://github.com/dbt-labs/dbt-utils/blob/1.3.2/macros/sql/generate_surrogate_key.sql)
