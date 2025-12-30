@@ -11,7 +11,7 @@ The possible values for `on_schema_change` are:
 
 ## Configuring CI jobs when your project has incremental models
 
-Because your CI job is building modified models into a PR-specific schema, on the first execution of dbt build --select state:modified+, the modified incremental model will be built in its entirety _because it does not yet exist in the PR-specific schema_ and is_incremental will be false. You're running in full-refresh mode: This wastes time and compute.
+Because your CI job is building modified models into a PR-specific schema, on the first execution of `dbt build --select state:modified+`, the modified incremental model will be built in its entirety _because it does not yet exist in the PR-specific schema_ and is_incremental will be false. You're running in full-refresh mode: This wastes time and compute.
 
 You'll have two commands for your dbt Cloud CI check to execute:
 
