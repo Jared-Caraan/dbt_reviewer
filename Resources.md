@@ -39,3 +39,6 @@
 
 ## Snapshots
 - [Snapshot](https://docs.getdbt.com/docs/build/snapshots#what-are-snapshots)
+
+## Analyses & Seeds
+- [Analyses](https://docs.getdbt.com/docs/build/analyses#overview)
