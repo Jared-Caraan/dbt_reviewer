@@ -1,8 +1,12 @@
-## Resources
-- [List of dbt commands](https://docs.getdbt.com/category/list-of-commands)
-- [dbt node selection syntax](https://docs.getdbt.com/reference/node-selection/syntax)
+## Tools
 - [hub.getdbt.com](http://hub.getdbt.com/)
 - [testing documentation](https://docs.getdbt.com/reference/node-selection/test-selection-examples)
+
+## Commands & Syntax
+- [List of dbt commands](https://docs.getdbt.com/category/list-of-commands)
+- [dbt node selection syntax](https://docs.getdbt.com/reference/node-selection/syntax)
+
+## Jinjas & Macros
 - [run_query macro documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/run_query)
 - [log macro documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/log)
 - [target variable documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/target)
@@ -11,6 +15,8 @@
 - [get_relations_by_prefix documentation](https://github.com/dbt-labs/dbt-utils?tab=readme-ov-file#get_relations_by_prefix-source)
 - [Custom schema names](https://docs.getdbt.com/docs/build/custom-schemas)
 - [Environment variables](https://docs.getdbt.com/docs/build/environment-variables)
+
+## Incrementals 
 - [Configure incremental models](https://docs.getdbt.com/docs/build/incremental-models)
 - [Incremental strategies](https://docs.getdbt.com/docs/build/incremental-strategy)
 - [append](https://docs.getdbt.com/docs/build/incremental-strategy#append)
