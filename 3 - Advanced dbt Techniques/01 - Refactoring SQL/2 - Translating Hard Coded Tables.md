@@ -31,7 +31,7 @@ The first thing we'll do with our legacy code is look for all of our hardcoded t
           - name: payment
     
     ```
-7. Now that your sources are configured, open your customer_orders.sql file and replace any hardcoded references (i.e, raw.jaffle_shop.customers) with a source function, referencing the sources you have set up.
+7. Now that your sources are configured, open your `customer_orders.sql` file and replace any hardcoded references (i.e, `raw.jaffle_shop.customers`) with a source function, referencing the sources you have set up.
       ```sql
       select 
           orders.id as order_id,
