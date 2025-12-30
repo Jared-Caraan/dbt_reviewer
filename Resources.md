@@ -1,6 +1,12 @@
 ## Tools
 - [hub.getdbt.com](http://hub.getdbt.com/)
 
+## Data Modelling Frameworks
+- [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
+- [Data Vault 2.0 with dbt](https://docs.getdbt.com/blog/data-vault-with-dbt-cloud)
+- [Medallion Architecture with dbt](https://tsaiprabhanj.medium.com/medallion-architecture-with-dbt-a40050743be3)
+- [Normalized vs Denormalized](https://medium.com/analytics-vidhya/database-normalization-vs-denormalization-a42d211dd891)
+
 ## Testing
 - [testing documentation](https://docs.getdbt.com/reference/node-selection/test-selection-examples)
 
@@ -29,9 +35,3 @@
 - [microbatch as a strategy](https://docs.getdbt.com/docs/build/incremental-strategy#microbatch)
 - [microbatch incremental models](https://docs.getdbt.com/docs/build/incremental-microbatch#what-is-microbatch-in-dbt)
 - [Schema changes](https://docs.getdbt.com/docs/build/incremental-models#what-if-the-columns-of-my-incremental-model-change)
-
-## Data Modelling Frameworks
-- [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
-- [Data Vault 2.0 with dbt](https://docs.getdbt.com/blog/data-vault-with-dbt-cloud)
-- [Medallion Architecture with dbt](https://tsaiprabhanj.medium.com/medallion-architecture-with-dbt-a40050743be3)
-- [Normalized vs Denormalized](https://medium.com/analytics-vidhya/database-normalization-vs-denormalization-a42d211dd891)
