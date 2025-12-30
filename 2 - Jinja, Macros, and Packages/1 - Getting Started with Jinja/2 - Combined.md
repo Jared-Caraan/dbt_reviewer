@@ -28,5 +28,5 @@
 
 {{ sample_dictionary['word'] }}
 
-{{ sample_dictionary['word'] }} ({{ sample_dictionary['word'] }}): defined as "{{ sample_dictionary['definition'] }}"
+{{ sample_dictionary['word'] }} ({{ sample_dictionary['part_of_speech'] }}): defined as "{{ sample_dictionary['definition'] }}"
 ```
