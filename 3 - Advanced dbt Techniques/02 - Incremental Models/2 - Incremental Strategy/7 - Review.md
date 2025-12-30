@@ -11,7 +11,7 @@ Incremental models introduce tradeoffs.
 Good candidates:
 
 - Immutable event streams: tall and skinny tables, append-only, no updates
-- If there are any updates, a reliable updated_at field
+- If there are any updates, a reliable `updated_at` field
 
 Not-so-good candidates:
 
