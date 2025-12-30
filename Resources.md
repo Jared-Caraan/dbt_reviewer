@@ -43,3 +43,6 @@
 ## Analyses & Seeds
 - [Analyses](https://docs.getdbt.com/docs/build/analyses#overview)
 - [seeds](https://docs.getdbt.com/docs/build/seeds)
+
+## Exposures
+- [Exposures](https://docs.getdbt.com/docs/build/exposures)
