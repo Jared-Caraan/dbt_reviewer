@@ -12,6 +12,8 @@
 - [Custom schema names](https://docs.getdbt.com/docs/build/custom-schemas)
 - [Environment variables](https://docs.getdbt.com/docs/build/environment-variables)
 - [Configure incremental models](https://docs.getdbt.com/docs/build/incremental-models)
+- [Incremental strategies](https://docs.getdbt.com/docs/build/incremental-strategy)
+- [append](https://docs.getdbt.com/docs/build/incremental-strategy#append)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
