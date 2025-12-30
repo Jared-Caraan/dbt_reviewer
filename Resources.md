@@ -36,3 +36,6 @@
 - [microbatch incremental models](https://docs.getdbt.com/docs/build/incremental-microbatch#what-is-microbatch-in-dbt)
 - [Schema changes](https://docs.getdbt.com/docs/build/incremental-models#what-if-the-columns-of-my-incremental-model-change)
 - [Setting up CI for incremental models](https://docs.getdbt.com/best-practices/clone-incremental-models)
+
+## Snapshots
+- [Snapshot](https://docs.getdbt.com/docs/build/snapshots#what-are-snapshots)
