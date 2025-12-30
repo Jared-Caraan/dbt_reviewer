@@ -292,6 +292,9 @@
     - Fix the `payments` references and aliases on the marts CTE.
     
     </details>
+
+##
+
 **Move transformations to staging models**
 Once you're done with the above, It's time to split out the code under `-- staging` and create models!
 
