@@ -23,6 +23,6 @@ What is a potential strategy for handling late-arriving data in incremental mode
 a. Adding a secondary model to handle late-arriving data exclusively.\
 b. Including logic to rebuild the entire table every run, even if it’s incremental.\
 c. Creating conditional logic in the is_incremental() block to update rows for overlapping time periods.\
-d. Partitioning data by year to ignore late-arriving records.\
+d. Partitioning data by year to ignore late-arriving records.
 
 Answer: c
