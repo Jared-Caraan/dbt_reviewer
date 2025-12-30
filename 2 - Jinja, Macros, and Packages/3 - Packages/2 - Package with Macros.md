@@ -26,6 +26,8 @@ In this example, we will be working with `dbt_utils` package.
 5. You can click **Compile** to see the under-the-hood SQL query of the macro.
 6. To see the macro in detail, you can navigate to the [macro page](https://github.com/dbt-labs/dbt-utils/blob/1.3.2/macros/sql/date_spine.sql) in the repository.
 
+##
+
 ### generate_surrogate_key macro
 In this another example, we will be working with `generate_surrogate_key` macro under `dbt_utils` package.
 
