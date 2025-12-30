@@ -9,6 +9,8 @@
 - [execute variable documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/execute)
 - [agate file types documentation](https://agate.readthedocs.io/en/latest/api/table.html#agate.Table.columns)
 - [get_relations_by_prefix documentation](https://github.com/dbt-labs/dbt-utils?tab=readme-ov-file#get_relations_by_prefix-source)
+- [Custom schema names](https://docs.getdbt.com/docs/build/custom-schemas)
+- [Environment variables](https://docs.getdbt.com/docs/build/environment-variables)
 
 ## Data Modelling Frameworks
 - [Building a Kimball dimensional model with dbt](https://docs.getdbt.com/blog/kimball-dimensional-model)
