@@ -67,6 +67,8 @@
 - [Writing custom generic tests](https://learn.getdbt.com/learn/course/advanced-testing/custom-tests-40-min/custom-tests?page=10#:~:text=Writing%20custom%20generic%20tests)
 - [Test configurations](https://docs.getdbt.com/reference/test-configs#test-specific-configurations)
 
+## Advanced Deployment
+- [dbt docs: Environments](https://docs.getdbt.com/docs/collaborate/environments)
 
 ## Grants
 - [Grants](https://docs.getdbt.com/reference/resource-configs/grants)
