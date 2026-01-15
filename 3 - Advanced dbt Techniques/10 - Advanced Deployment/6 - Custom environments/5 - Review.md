@@ -7,4 +7,4 @@ There will be cases where you want to have dbt behave differently between enviro
 
 ## Related Resources
 
-- [dbt docs: Environment variables](https://learn.getdbt.com/learn/course/advanced-deployment/custom-environment-and-job-behavior-30min/understanding-custom-environments?page=8#:~:text=dbt%20docs%3A%20Environment%20variables)
+- [dbt docs: Environment variables](https://docs.getdbt.com/docs/build/environment-variables)
