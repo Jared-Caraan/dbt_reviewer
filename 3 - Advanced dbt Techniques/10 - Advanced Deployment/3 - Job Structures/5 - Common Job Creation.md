@@ -12,7 +12,7 @@
     - Configure your desired schedule for your job (e.g. 12 hrs everyday at midnight)
 3. Hit **Save**
 
-> [!INFO]
+> [!NOTE]
 > If you tick the **Run source freshness** and something fails in the freshness test, it will still continue downstream. But if you add freshness validation as a command and it fails, the pipeline will not continue.
 
 **Creating a full refresh job**
