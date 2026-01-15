@@ -70,9 +70,8 @@
 ## Advanced Deployment
 - [dbt docs: Environments](https://docs.getdbt.com/docs/collaborate/environments)
 - [Adopting CI/CD with dbt Cloud](https://www.getdbt.com/blog/adopting-ci-cd-with-dbt-cloud/)
-
-## Job Structure
 - [dbt docs: Fresh rebuilds](https://docs.getdbt.com/docs/deploy/cloud-ci-job#fresh-rebuilds)
-
+- [dbt guides: Airflow and dbt Cloud](https://docs.getdbt.com/guides/airflow-and-dbt-cloud?step=1)
+  
 ## Grants
 - [Grants](https://docs.getdbt.com/reference/resource-configs/grants)
