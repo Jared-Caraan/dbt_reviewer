@@ -38,5 +38,5 @@ having average_amount < 1
 We can overwrite native tests by creating a generic test with the exact same name as the native test (unique, not_null, relationships, acccepted_values). You can put your new version in the tests/generic/subdirectory, and rebuild the test block with your own SQL. dbt will then use your specified test rather than the native version. **Note**: Before you run off and customize the native tests, be sure to learn about test configurations later in the course!
 
 ## Related resources
-- [Writing custom generic tests](https://learn.getdbt.com/learn/course/advanced-testing/custom-tests-40-min/custom-tests?page=10#:~:text=Writing%20custom%20generic%20tests)
+- [Writing custom generic tests](https://docs.getdbt.com/best-practices/writing-custom-generic-tests)
 - [Test configurations](https://docs.getdbt.com/reference/test-configs#test-specific-configurations)
