@@ -74,6 +74,7 @@
 - [dbt guides: Airflow and dbt Cloud](https://docs.getdbt.com/guides/airflow-and-dbt-cloud?step=1)
 - [dbt docs: dbt Cloud CI Job](https://docs.getdbt.com/docs/deploy/cloud-ci-job#understanding-dbt-cloud-slim-ci)
 - [target variable](https://docs.getdbt.com/reference/dbt-jinja-functions/target)
+- [dbt docs: Environment variables](https://docs.getdbt.com/docs/build/environment-variables)
   
 ## Grants
 - [Grants](https://docs.getdbt.com/reference/resource-configs/grants)
