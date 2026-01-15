@@ -71,5 +71,8 @@
 - [dbt docs: Environments](https://docs.getdbt.com/docs/collaborate/environments)
 - [Adopting CI/CD with dbt Cloud](https://www.getdbt.com/blog/adopting-ci-cd-with-dbt-cloud/)
 
+## Job Structure
+- [dbt docs: Fresh rebuilds](https://docs.getdbt.com/docs/deploy/cloud-ci-job#fresh-rebuilds)
+
 ## Grants
 - [Grants](https://docs.getdbt.com/reference/resource-configs/grants)
