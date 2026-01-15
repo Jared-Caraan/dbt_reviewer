@@ -69,6 +69,7 @@
 
 ## Advanced Deployment
 - [dbt docs: Environments](https://docs.getdbt.com/docs/collaborate/environments)
+- [Adopting CI/CD with dbt Cloud](https://www.getdbt.com/blog/adopting-ci-cd-with-dbt-cloud/)
 
 ## Grants
 - [Grants](https://docs.getdbt.com/reference/resource-configs/grants)
