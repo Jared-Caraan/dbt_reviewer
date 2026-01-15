@@ -21,4 +21,4 @@ When a run completes, you can view several things about that particular run
 There are cases where you may have jobs that run concurrently on shared models. In these cases, you likely want to account for those conflicts. This can be difficult to achieve with the user friendly scheduling options. To avoid these conflict, consider using cron syntax or API calls to avoid the overlapping jobs.
 
 ## Related Resources
-- [dbt guides: Airflow and dbt Cloud](https://learn.getdbt.com/learn/course/advanced-deployment/orchestration-35-min/what-is-orchestration?page=8#:~:text=dbt%20guides%3A%20Airflow%20and%20dbt%20Cloud)
+- [dbt guides: Airflow and dbt Cloud](https://docs.getdbt.com/guides/airflow-and-dbt-cloud?step=1)
