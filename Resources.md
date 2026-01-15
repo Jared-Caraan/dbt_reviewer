@@ -64,7 +64,7 @@
 - [Project dependencies](https://docs.getdbt.com/docs/mesh/govern/project-dependencies#example)
 
 ## Custom Tests
-- [Writing custom generic tests](https://learn.getdbt.com/learn/course/advanced-testing/custom-tests-40-min/custom-tests?page=10#:~:text=Writing%20custom%20generic%20tests)
+- [Writing custom generic tests](https://docs.getdbt.com/best-practices/writing-custom-generic-tests)
 - [Test configurations](https://docs.getdbt.com/reference/test-configs#test-specific-configurations)
 
 ## Advanced Deployment
