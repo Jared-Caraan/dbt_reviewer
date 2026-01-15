@@ -59,5 +59,8 @@
 - [Access modifiers](https://docs.getdbt.com/docs/collaborate/govern/model-access#access-modifiers)
 - [Project dependencies](https://docs.getdbt.com/docs/mesh/govern/project-dependencies#example)
 
+## Multi-project
+- [Project dependencies](https://docs.getdbt.com/docs/mesh/govern/project-dependencies#example)
+
 ## Grants
 - [Grants](https://docs.getdbt.com/reference/resource-configs/grants)
