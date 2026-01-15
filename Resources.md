@@ -13,6 +13,7 @@
 ## Commands & Syntax
 - [List of dbt commands](https://docs.getdbt.com/category/list-of-commands)
 - [dbt node selection syntax](https://docs.getdbt.com/reference/node-selection/syntax)
+- [dbt node selector methods](https://docs.getdbt.com/reference/node-selection/methods)
 
 ## Jinjas & Macros
 - [run_query macro documentation](https://docs.getdbt.com/reference/dbt-jinja-functions/run_query)
