@@ -1,1 +1,1 @@
-exclude: ['1 - dbt Fundamentals/']
+exclude: ['1 - dbt Fundamentals/', '2 - Jinja, Macros, and Packages/', '3 - Advanced dbt Techniques/']
