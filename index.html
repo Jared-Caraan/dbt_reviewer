@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>dbt Reviewer — Topics</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f1412;
+      --panel: #151b18;
+      --border: #26302b;
+      --text: #e6ece9;
+      --muted: #9aa6a0;
+      --accent: #f29f05;
+      --green: #7fb8a2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #0d1210, #0f1412);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    header {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header .tag {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--green);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.3rem;
+    }
+
+    header h1 {
+      font-weight: 500;
+      font-size: 1.9rem;
+    }
+
+    /* grid layout: left + right */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.05rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, #151b18, #121715);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .panel a {
+      color: var(--green);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .panel a:hover {
+      text-decoration: underline;
+    }
+
+    /* right viewer */
+    #viewer {
+      background: linear-gradient(180deg, #161c18, #111311);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      min-height: 300px;
+      overflow-y: auto;
+    }
+
+    #viewer h3 {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--green);
+      margin-top: 0;
+    }
+
+    .file {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    .file a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .file a:hover {
+      color: var(--green);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="tag">DBT REVIEWER CONTENT</div>
+  <h1>Topics Overview</h1>
+</header>
+
+<main>
+
+  <!-- LEFT -->
+  <div>
+    <section>
+      <h2>1 – dbt Fundamentals</h2>
+      <div class="panel">
+        <a onclick="loadFolder('1 - dbt Fundamentals')">View Contents →</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>2 – Jinja, Macros, and Packages</h2>
+      <div class="panel">
+        <a onclick="loadFolder('2 - Jinja, Macros, and Packages')">View Contents →</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>3 – Advanced dbt Techniques</h2>
+      <div class="panel">
+        <a onclick="loadFolder('3 - Advanced dbt Techniques')">View Contents →</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- RIGHT -->
+  <div id="viewer">
+    <h3>Select a Topic to View Files</h3>
+    <div id="file-list">
+      <p class="muted">Click one of the topics on the left.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  dbt Reviewer · Learning Materials<br />
+  “Explore dbt topics with clarity and purpose.”
+</footer>
+
+<script>
+  const OWNER = "Jared-Caraan";
+  const REPO = "dbt_reviewer";
+
+  async function loadFolder(path) {
+    const listEl = document.getElementById("file-list");
+    listEl.innerHTML = "Loading…";
+
+    const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(path)}`;
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      listEl.innerHTML = "";
+      data.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "file";
+        div.innerHTML = `
+          <a href="${item.html_url}" target="_blank">
+            ${item.type === "dir" ? "📁" : "📄"} ${item.name}
+          </a>
+        `;
+        listEl.appendChild(div);
+      });
+    } catch (e) {
+      listEl.innerHTML = "Failed to load contents.";
+    }
+  }
+</script>
+
+</body>
+</html>
 
